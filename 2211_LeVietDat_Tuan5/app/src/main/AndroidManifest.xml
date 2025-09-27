@@ -17,6 +17,7 @@
         <activity android:name=".BaiHatActivity" />
         <activity android:name=".PhongActivity" />
         <activity android:name=".MainActivity" />
+        <activity android:name=".RegisterActivity" />
 
         <!-- LoginActivity là màn hình mở đầu -->
         <activity

@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class LoginActivity extends AppCompatActivity {
     EditText edtUser, edtPass;
-    Button btnLogin;
+    Button btnLogin, btnToRegister; // thêm nút Đăng ký
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +19,7 @@ public class LoginActivity extends AppCompatActivity {
         edtUser = findViewById(R.id.edtUser);
         edtPass = findViewById(R.id.edtPass);
         btnLogin = findViewById(R.id.btnLogin);
+        btnToRegister = findViewById(R.id.btnToRegister); // ánh xạ nút Đăng ký
 
         btnLogin.setOnClickListener(v -> {
             String user = edtUser.getText().toString();
@@ -30,6 +31,12 @@ public class LoginActivity extends AppCompatActivity {
             } else {
                 Toast.makeText(LoginActivity.this, "Sai tài khoản hoặc mật khẩu!", Toast.LENGTH_SHORT).show();
             }
+        });
+
+        // sự kiện cho nút Đăng ký
+        btnToRegister.setOnClickListener(v -> {
+            Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+            startActivity(intent);
         });
     }
 }

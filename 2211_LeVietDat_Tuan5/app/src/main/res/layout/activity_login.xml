@@ -23,4 +23,11 @@
         android:text="Đăng nhập"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/btnToRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chưa có tài khoản? Đăng ký"
+        android:layout_marginTop="12dp"/>
+
 </LinearLayout>
