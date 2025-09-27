@@ -1,6 +1,9 @@
 package com.example.a2211_levietdat_tuan5;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.LinearGradient;
+import android.graphics.Shader;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
@@ -14,8 +17,11 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        TextView tv = findViewById(R.id.tvRegister);
-        tv.setText("Đây là trang Đăng ký");
+        TextView tvTitle = findViewById(R.id.tvRegister);
+        Shader textShader = new LinearGradient(0, 0, 0, tvTitle.getTextSize(),
+                new int[]{Color.YELLOW, Color.RED},
+                null, Shader.TileMode.CLAMP);
+        tvTitle.getPaint().setShader(textShader);
 
         btnRegister = findViewById(R.id.btnRegister);
         btnToLogin = findViewById(R.id.btnToLogin);

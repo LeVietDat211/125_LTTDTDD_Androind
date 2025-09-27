@@ -1,66 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
     android:orientation="vertical"
-    android:padding="20dp"
-    android:background="@drawable/bg_login"> <!-- Thêm background -->
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="@drawable/bg_login">
+    <!-- Text nhỏ ở góc phải -->
+    <TextView
+        android:id="@+id/tvNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User: admin | Pass: 123"
+        android:textSize="12sp"
+        android:textColor="@android:color/white"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="8dp" />
+
+    <!-- Tiêu đề -->
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Quản Lý Karaoke"
-        android:textSize="24sp"
+        android:textSize="22sp"
         android:textStyle="bold"
-        android:textColor="@android:color/black"
-        android:layout_marginBottom="30dp"
-        android:gravity="center"/>
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="30dp" />
 
+    <!-- Ô nhập User -->
     <EditText
         android:id="@+id/edtUser"
-        android:hint="Tên đăng nhập"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="Tên đăng nhập"
         android:background="@android:color/white"
-        android:padding="10dp"
-        android:layout_marginBottom="12dp"/>
+        android:padding="12dp"
+        android:layout_marginBottom="16dp" />
 
+    <!-- Ô nhập Password -->
     <EditText
         android:id="@+id/edtPass"
-        android:hint="Mật khẩu"
-        android:inputType="textPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="Mật khẩu"
+        android:inputType="textPassword"
         android:background="@android:color/white"
-        android:padding="10dp"
-        android:layout_marginBottom="8dp"/>
+        android:padding="12dp"
+        android:layout_marginBottom="20dp" />
 
-    <!-- Thêm dòng chữ quên mật khẩu -->
+    <!-- Quên mật khẩu -->
     <TextView
         android:id="@+id/tvForgotPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Quên mật khẩu?"
-        android:textColor="#FFFFFF"
-        android:textStyle="italic"
-        android:layout_marginBottom="20dp"
-        android:gravity="end" />
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="20dp" />
 
+    <!-- Nút đăng nhập -->
     <Button
         android:id="@+id/btnLogin"
-        android:text="Đăng nhập"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="#2DE7C9"
-        android:textColor="@android:color/white"/>
+        android:text="Đăng nhập"
+        android:backgroundTint="@color/purple_500"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="12dp" />
 
+    <!-- Nút đăng ký -->
     <Button
         android:id="@+id/btnToRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Chưa có tài khoản? Đăng ký"
-        android:layout_marginTop="12dp"
-        android:backgroundTint="#915AF4"
-        android:textColor="@android:color/white"/>
-
+        android:backgroundTint="@color/purple_500"
+        android:textColor="@android:color/white" />
 </LinearLayout>
