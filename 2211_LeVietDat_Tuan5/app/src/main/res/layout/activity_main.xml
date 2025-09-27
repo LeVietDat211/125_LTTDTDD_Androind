@@ -1,31 +1,104 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:gravity="center"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20dp">
+    android:padding="16dp"
+    android:background="@drawable/bg_login">
 
-    <Button
+    <!-- Tiêu đề ứng dụng -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quản lý Karaoke"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#1A237E"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Nút Quản lý Phòng -->
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnPhong"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:text="Quản lý Phòng"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:textSize="16sp"
+        android:padding="16dp"
+        app:icon="@android:drawable/ic_menu_mapmode"
+        app:iconGravity="start"
+        app:cornerRadius="12dp"
+        app:backgroundTint="#073FE7"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
-    <Button
+    <!-- Nút Quản lý Bài hát -->
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnBaiHat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:text="Quản lý Bài hát"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:textSize="16sp"
+        android:padding="16dp"
+        app:icon="@android:drawable/ic_menu_search"
+        app:iconGravity="start"
+        app:cornerRadius="12dp"
+        app:backgroundTint="#073FE7"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@id/btnPhong"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
-    <Button
+    <!-- Nút Quản lý Hóa đơn -->
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnHoaDon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:text="Quản lý Hóa đơn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:textSize="16sp"
+        android:padding="16dp"
+        app:icon="@android:drawable/ic_menu_agenda"
+        app:iconGravity="start"
+        app:cornerRadius="12dp"
+        app:backgroundTint="#073FE7"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@id/btnBaiHat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
-    <Button
+    <!-- Nút Đăng xuất -->
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnLogout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:text="Đăng xuất"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-</LinearLayout>
+        android:textSize="16sp"
+        android:padding="16dp"
+        app:icon="@android:drawable/ic_menu_close_clear_cancel"
+        app:iconGravity="start"
+        app:cornerRadius="12dp"
+        app:backgroundTint="#0088C8"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@id/btnHoaDon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
