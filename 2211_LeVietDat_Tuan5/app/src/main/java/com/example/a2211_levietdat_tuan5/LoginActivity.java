@@ -6,6 +6,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
+import android.graphics.LinearGradient;
+import android.graphics.Shader;
+import android.widget.TextView;
+import android.graphics.Color;
+
 
 public class LoginActivity extends AppCompatActivity {
     EditText edtUser, edtPass;
@@ -13,8 +18,15 @@ public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        TextView tvTitle = findViewById(R.id.tvTitle);
+        Shader textShader = new LinearGradient(0, 0, 0, tvTitle.getTextSize(),
+                new int[]{Color.YELLOW, Color.RED}, // xanh lá + hồng
+                null, Shader.TileMode.CLAMP);
+        tvTitle.getPaint().setShader(textShader);
+
 
         edtUser = findViewById(R.id.edtUser);
         edtPass = findViewById(R.id.edtPass);
