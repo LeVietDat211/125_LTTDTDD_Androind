@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gioi Thieu Sinh Vien"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_marginTop="12dp"/>
+    <EditText
+        android:id="@+id/edtTen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhap ho ten :"
+        android:inputType="textPersonName"
+        android:layout_marginTop="20dp"/>
+    <EditText
+        android:id="@+id/edtMa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhap ma sinh vien"
+        android:layout_marginTop="10dp"
+        />
+    <EditText
+        android:id="@+id/edtLop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhap ma lop"
+        android:layout_marginTop="10dp"/>
+    <Button
+        android:id="@+id/btnXem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhap Thong Tin Vao Profile"
+        android:textColorHint="@color/white"
+        />
+</LinearLayout>
